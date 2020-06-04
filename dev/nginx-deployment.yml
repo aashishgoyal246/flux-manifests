@@ -6,7 +6,7 @@ metadata:
     app: flux-dev
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.flux-dev: glob:dev*
+    fluxcd.io/tag.flux-dev: glob:dev-*
 spec:
   replicas: 1
   selector:

@@ -6,7 +6,7 @@ metadata:
     app: flux-master
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.flux-master: glob:master*
+    fluxcd.io/tag.flux-master: glob:master-*
 spec:
   replicas: 3
   selector:
