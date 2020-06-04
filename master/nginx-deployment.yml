@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flux-master
+  labels:
+    app: flux-master
+  annotations:
+    fluxcd.io/automated: "true"
+    fluxcd.io/tag.flux-master: glob:master*
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flux-master
+  template:
+    metadata:
+      labels:
+        app: flux-master
+    spec:
+      containers:
+      - name: flux-master
+        image: aashishgoyal246/test-flux:master
+        ports:
+        - containerPort: 80

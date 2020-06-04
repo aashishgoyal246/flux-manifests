@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flux-dev-service
+spec:
+  selector:
+    app: flux-dev
+  type: NodePort
+  ports:
+    - name: my-flux-dev-port
+      nodePort: 32455
+      port: 8080
+      targetPort: 80

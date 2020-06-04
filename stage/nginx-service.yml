@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flux-stage-service
+spec:
+  selector:
+    app: flux-stage
+  type: NodePort
+  ports:
+    - name: my-flux-stage-port
+      nodePort: 32456
+      port: 8082
+      targetPort: 80

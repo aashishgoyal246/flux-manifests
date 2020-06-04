@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flux-dev
+  labels:
+    app: flux-dev
+  annotations:
+    fluxcd.io/automated: "true"
+    fluxcd.io/tag.flux-dev: glob:dev*
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flux-dev
+  template:
+    metadata:
+      labels:
+        app: flux-dev
+    spec:
+      containers:
+      - name: flux-dev
+        image: aashishgoyal246/test-flux:dev
+        ports:
+        - containerPort: 80
