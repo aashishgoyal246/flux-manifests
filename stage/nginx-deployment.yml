@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: flux-stage
-        image: aashishgoyal246/test-flux:stage
+        image: aashishgoyal246/test-flux:stage-947b6ad
         ports:
         - containerPort: 80
