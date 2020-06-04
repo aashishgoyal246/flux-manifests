@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: flux-master
-        image: aashishgoyal246/test-flux:master
+        image: aashishgoyal246/test-flux:master-1d5351e
         ports:
         - containerPort: 80
