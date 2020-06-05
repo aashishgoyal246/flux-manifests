@@ -8,6 +8,6 @@ spec:
   type: NodePort
   ports:
     - name: my-flux-dev-port
-      nodePort: 32455
+      nodePort: 32457
       port: 8080
       targetPort: 80
