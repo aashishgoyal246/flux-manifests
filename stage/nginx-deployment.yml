@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flux-stage
+  namespace: stage
   labels:
     app: flux-stage
   annotations:

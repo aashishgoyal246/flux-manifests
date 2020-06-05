@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flux-master
+  namespace: prod
   labels:
     app: flux-master
   annotations:
