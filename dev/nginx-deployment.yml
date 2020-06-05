@@ -1,9 +1,7 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flux-dev
-  namespace: dev
   labels:
     app: flux-dev
   annotations:
@@ -21,6 +19,6 @@ spec:
     spec:
       containers:
       - name: flux-dev
-        image: aashishgoyal246/test-flux:dev-2aa3ae7
+        image: aashishgoyal246/test-flux:dev-44d9460
         ports:
         - containerPort: 80
