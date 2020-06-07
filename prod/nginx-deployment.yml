@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flux-master
+  name: flux-prod
   namespace: prod
   labels:
-    app: flux-master
+    app: flux-prod
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.flux-master: glob:master-*
+    fluxcd.io/tag.flux-prod: glob:master-*
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: flux-master
+      app: flux-prod
   template:
     metadata:
       labels:
-        app: flux-master
+        app: flux-prod
     spec:
       containers:
-      - name: flux-master
+      - name: flux-prod
         image: aashishgoyal246/test-flux:master-1d5351e
         ports:
         - containerPort: 80
